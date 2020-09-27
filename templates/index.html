@@ -1,0 +1,113 @@
+<html>
+<head>
+    <title>Dojo Fruit Store Assignment</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body style="background:linear-gradient(#e6f2ff,#cce5ff,#b3d7ff);">
+  
+      <main role="main">
+  
+        
+          <div class="container text-center">
+            <h1 style="font-size:50pt;">Dojo Fruit Store</h1>
+            <h2>Your Dojo Has Started a Fruit Store! </h2>
+            <h4 style="margin-top:15px;">Please Use This App To Select Which Fruit and How Many of Each You Would Like to Have!</h4>
+            <h4 style="margin-bottom:15px;">Once We Get Your Order Your Student Account Will Be Charged Automatically.</h4>
+            <p>
+              <a href="#buy" class="btn btn-primary my-2" style="background-color:#bfbfbf;border:1px solid #a6a6a6;color:black;font-weight:bold;">Order Fruit From The Store</a>
+            </p>
+            <hr>
+          </div>
+  
+        <div class="album py-5 bg-light">
+          <div class="container">
+             <form action='/checkout' method='post'>
+                <h4 class="mb-3" id='buy'>What would you like to buy?</h4>
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Fruit Name</th>
+                        <th>Quantity</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><img src="{{url_for('static', filename='img/strawberry.png')}}" style="width:50px;height:50px"/> Strawberries</td>
+                        <td>
+                            <select name='strawberry'>
+                                <option value='0'>0</option>
+                                <option value='1'>1</option>
+                                <option value='2'>2</option>
+                                <option value='3'>3</option>
+                                <option value='4'>4</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="{{url_for('static', filename='img/raspberry.png')}}" style="width:50px;height:50px;"/> Raspberries</td>
+                        <td>
+                            <select name='raspberry'>
+                                <option value='0'>0</option>
+                                <option value='1'>1</option>
+                                <option value='2'>2</option>
+                                <option value='3'>3</option>
+                                <option value='4'>4</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="{{url_for('static', filename='img/apple.png')}}" style="width:50px;height:50px"/> Apples</td>
+                        <td>
+                            <select name='apple'>
+                                <option value='0'>0</option>
+                                <option value='1'>1</option>
+                                <option value='2'>2</option>
+                                <option value='3'>3</option>
+                                <option value='4'>4</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="{{url_for('static', filename='img/blackberry.png')}}" style="width:50px;height:50px;"/> Blackberries</td>
+                        <td>
+                            <select name='blackberry'>
+                                <option value='0'>0</option>
+                                <option value='1'>1</option>
+                                <option value='2'>2</option>
+                                <option value='3'>3</option>
+                                <option value='4'>4</option>
+                            </select>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+  
+                <h4 class="mb-3" id='info'>Your Information:</h4>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="firstName">First Name:</label>
+                        <input type="text" class="form-control" name="first_name" placeholder="" value="">
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" class="form-control" name="last_name" placeholder="" value="">
+                    </div>
+                </div>
+  
+                <div class="mb-3">
+                    <label for="email">Your Student ID <span class="text-muted">(Optional)</span></label>
+                    <input type="text" class="form-control" name="student_id" placeholder="123-456-7890">
+                </div>
+              
+                <hr class="mb-4">
+                <button class="btn btn-primary btn-lg btn-block" type="submit" style="background-color:#bfbfbf;border:1px solid #a6a6a6;color:black;font-weight:bold;">Checkout</button>
+            </form>
+
+            
+          </div>
+        </div>
+  
+      </main>
+      
+</body>
+</html>

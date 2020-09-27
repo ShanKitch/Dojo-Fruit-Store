@@ -1,0 +1,65 @@
+<html>
+<head>
+    <title>Dojo Fruit Store Assignment</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body style="background:linear-gradient(#e6f2ff,#cce5ff,#b3d7ff);">
+
+  
+      <main role="main">
+  
+     
+          <div class="container text-center">
+            <h1 style="font-size:50pt;">Thank You For Your Order!</h1>
+            <p class="lead text-muted">We Ordered {{count}} Items For You And Charged Your Student Account on {{timestamp}}</p>
+          </div>
+      
+  
+        <div class="album py-5 bg-light">
+          <div class="container">
+                <h3 class="mb-3" style="font-weight:bold;text-decoration:underline;">You Have Ordered:</h3>
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Fruit Name</th>
+                        <th>Quantity</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><img src="{{url_for('static', filename='img/strawberry.png')}}" style="width:50px;height:50px"/> Strawberries</td>
+                        <td>{{strawberry}}</td>
+                    </tr>
+                    <tr>
+                        <td><img src="{{url_for('static', filename='img/raspberry.png')}}" style="width:50px;height:50px;"/> Raspberries</td>
+                        <td>{{raspberry}}</td>
+                    </tr>
+                    <tr>
+                        <td><img src="{{url_for('static', filename='img/apple.png')}}" style="width:50px;height:50px"/> Apples</td>
+                        <td>{{apple}}</td>
+                    </tr>
+                    <tr>
+                        <td><img src="{{url_for('static', filename='img/blackberry.png')}}" style="width:50px;height:50px;"/> Blackberries</td>
+                        <td>{{blackberry}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+  
+                <h3 class="mb-3" style="font-weight:bold;text-decoration:underline;">Your Information</h3>
+                <div class="row" style="font-weight:bolder; font-size:14pt;">
+                    <div class="col-md-6 mb-3">
+                        <p>Name: {{first_name}} {{last_name}}</p>
+                        <p>Student ID: {{student_id}}</p>
+                    </div>
+
+                </div>
+                <hr class="mb-4">
+                <a class="btn btn-primary btn-lg btn-block" href="/" style="background-color:#bfbfbf;border:1px solid #a6a6a6;color:black;font-weight:bold;">Go Back</a>
+            
+          </div>
+        </div>
+  
+      </main>
+      
+</body>
+</html>
